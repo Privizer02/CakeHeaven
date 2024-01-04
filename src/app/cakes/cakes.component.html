@@ -1,1 +1,23 @@
-<p>cakes works!</p>
+<div class="row">
+  <form>
+    <select class="form-select" name="select" [(ngModel)]="params.filter.ingredients" (change)="getCakes()">
+      <option value="" selected>--</option>
+      <option value="{{ingredient}}" *ngFor="let ingredient of ingredients">{{ingredient}}</option>
+      
+    </select>
+  </form>
+</div>
+
+
+
+<div class="row">
+  <div class="col-4" *ngFor="let cake of this.cakes">
+    <div class="card" style="width: 24rem;" >
+      <img class="card-img-top" src="http://localhost:3000/image/cakes/{{cake._id}}.jpg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text cake-name">{{cake.name}}</p>
+        <p class="card-text">{{cake.ingredients}}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+img {
+  width: auto;
+  height: 260px;
+  
+}
+img:hover {
+  transform: scale(1.5);
+}
+
+.cake-name {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.card {
+  margin: 20px;
+  overflow: hidden;
+}
+
+.card img {
+  transition: transform .5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}

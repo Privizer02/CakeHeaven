@@ -19,6 +19,10 @@ export class CakeService {
         set('filter',params.filter && JSON.stringify(params.filter) ||"")
       }
     }
-    return this.http.get(baseURL).pipe(map((data:any) => {return data.map((elem:any) => new Cake(elem))}))
+    return this.http.get(baseURL,options).pipe(map((data:any) => {return data.map((elem:any) => new Cake(elem))}))
   } 
+
+  getIngredients():Observable<string[]> {
+    return this.http.get(`http://localhost:3000/api/ingredients`).pipe(map((data:any)=>{return data as Array<string>}))
+  }
 }

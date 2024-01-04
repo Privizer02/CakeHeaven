@@ -10,6 +10,7 @@ import { HomeComponent } from './core/home/home.component';
 import { ContactComponent } from './core/contact/contact.component';
 import { ProfileComponent } from './core/profile/profile.component';
 import { CakesComponent } from './cakes/cakes.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { CakesComponent } from './cakes/cakes.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
