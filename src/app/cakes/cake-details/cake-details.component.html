@@ -1,0 +1,24 @@
+<div class="row detail">
+  <div class="col-6">
+    <img src="http://localhost:3000/image/cakes/{{cake._id}}.jpg" >
+  </div>
+  <div class=col-6>
+    <div class="row">
+      <h4>{{cake.name}}</h4>
+    </div>
+    <div class="row">
+      <p> <b>Main ingredients: </b>{{cake.ingredients}}</p>
+     
+    </div>
+    <div class="row">
+      <p> <b>Origin:</b> {{cake.origin}}</p>
+     
+    </div>
+    <div class="row">
+      <p>{{cake.description}}</p>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary" style="width: 5rem;" [routerLink]="['/cakes']">Nazad</button>
+    </div>
+  </div>
+</div>

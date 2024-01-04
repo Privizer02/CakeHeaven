@@ -11,6 +11,7 @@ import { ContactComponent } from './core/contact/contact.component';
 import { ProfileComponent } from './core/profile/profile.component';
 import { CakesComponent } from './cakes/cakes.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CakeDetailsComponent } from './cakes/cake-details/cake-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     ContactComponent,
     ProfileComponent,
-    CakesComponent
+    CakesComponent,
+    CakeDetailsComponent
   ],
   imports: [
     BrowserModule,

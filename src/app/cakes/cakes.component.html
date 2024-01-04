@@ -11,7 +11,7 @@
 
 
 <div class="row">
-  <div class="col-4" *ngFor="let cake of this.cakes">
+  <div class="col-4" *ngFor="let cake of this.cakes" [routerLink]="['/cakes',cake._id]">
     <div class="card" style="width: 24rem;" >
       <img class="card-img-top" src="http://localhost:3000/image/cakes/{{cake._id}}.jpg" alt="Card image cap">
       <div class="card-body">

@@ -15,6 +15,8 @@ img:hover {
 .card {
   margin: 20px;
   overflow: hidden;
+  box-shadow: 1px 2px 8px 0px rgba(0,0,0,0.3);
+
 }
 
 .card img {
@@ -23,4 +25,8 @@ img:hover {
 
 .card:hover img {
   transform: scale(1.1);
+}
+
+.row {
+  margin-top: 20px;
 }
