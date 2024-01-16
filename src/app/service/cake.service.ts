@@ -22,19 +22,19 @@ export class CakeService {
         set('filter',params.filter && JSON.stringify(params.filter) ||"")
       }
     }
-    return this.http.get(baseURL,options).pipe(map((data:any) => {return data.map((elem:any) => new Cake(elem))}))
+    return this.http.get(`https://privizer.vercel.app/api/cakes`,options).pipe(map((data:any) => {return data.map((elem:any) => new Cake(elem))}))
   } 
 
   getIngredients():Observable<string[]> {
-    return this.http.get(`http://localhost:3000/api/ingredients`).pipe(map((data:any)=>{return data as Array<string>}))
+    return this.http.get(`https://privizer.vercel.app/api/ingredients`).pipe(map((data:any)=>{return data as Array<string>}))
   }
 
   getCake(cakeId:number):Observable<Cake> {
-    return this.http.get(baseURL+`/`+cakeId).pipe(map((data:any) =>{return new Cake(data)}))
+    return this.http.get(`https://privizer.vercel.app/api/cakes`+`/`+cakeId).pipe(map((data:any) =>{return new Cake(data)}))
   }
 
   getUser():Observable<User> {
-    return this.http.get(`http://localhost:3000/api/user`).pipe(map((data:any) => {return new User(data[0])}))
+    return this.http.get(`https://privizer.vercel.app/api/user`).pipe(map((data:any) => {return new User(data[0])}))
   }
 
   editUser(user:User):Observable<User> {
